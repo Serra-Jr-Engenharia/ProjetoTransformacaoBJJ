@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { useId, useState } from "react"
+import { useId, useState } from "react";
 
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 export default function PaymentTypeSelector() {
-  const id = useId()
-  const [selectedValue, setSelectedValue] = useState("on")
+  const id = useId();
+  const [selectedValue, setSelectedValue] = useState("on");
 
   return (
     <div className="bg-input/50 border inline-flex h-9 rounded-md p-0.5 mt-4">
@@ -20,6 +20,7 @@ export default function PaymentTypeSelector() {
           Uma Vez
           <RadioGroupItem id={`${id}-1`} value="off" className="sr-only" />
         </label>
+        {/* TODO: Add stronger background effect (e.g., group-data-[state=off]:bg-something) */}
         <label className="group-data-[state=off]:text-muted-foreground/70 relative z-10 inline-flex h-full min-w-8 cursor-pointer items-center justify-center px-4 whitespace-nowrap transition-colors select-none">
           <span>
             Mensalmente{" "}
@@ -31,5 +32,5 @@ export default function PaymentTypeSelector() {
         </label>
       </RadioGroup>
     </div>
-  )
+  );
 }
