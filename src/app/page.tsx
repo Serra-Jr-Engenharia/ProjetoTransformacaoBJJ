@@ -2,6 +2,8 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
+import Header from '@/components/Navigation/Header';
+import Footer from '@/components/Navigation/Footer';
 import Image from '@/components/Image/Image';
 import Card1 from '@/components/Information/Card1';
 import Card2 from '@/components/Information/Card2';
