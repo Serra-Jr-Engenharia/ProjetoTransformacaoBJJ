@@ -2,7 +2,7 @@ import { InstagramIcon, Mail } from 'lucide-react'
 
 export default function Footer() {
   return (
-    <footer className="text-white py-[20px] px-[30px] w-full box-border mt-auto">
+    <footer className="text-black py-[20px] px-[30px] w-full box-border mt-auto">
       < hr/>
       <div className="flex md:flex-row justify-between items-center gap-4 max-w-[1200px] w-full px-4 mx-auto">
 
