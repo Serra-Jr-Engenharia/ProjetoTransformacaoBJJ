@@ -7,7 +7,7 @@ export default function Card3() {
         PROJETO
       </h1>
       <div> 
-        <p className="text-black text-justify">
+        <p className="text-black text-justify font-semibold">
           O Projeto Transformação é um exemplo inspirador de como uma iniciativa
           social pode impactar positivamente a vida de muitas pessoas. Fundado
           em 11 de abril de 2005, no bairro da Lagoinha, e inicialmente

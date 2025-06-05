@@ -2,15 +2,13 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
-import Header from '@/components/Navigation/Header';
-import Footer from '@/components/Navigation/Footer';
+
 import Image from '@/components/Image/Image';
 import Card1 from '@/components/Information/Card1';
 import Card2 from '@/components/Information/Card2';
 import Card3 from '@/components/Information/Card3';
 import Partners from '@/components/Partners/Partners';
 import Subscribe from '@/components/Subscribe/Subscribe';
-import InformationWrapper from '@/components/Information/Information';
 
 export default function Home() {
   const router = useRouter()
@@ -31,26 +29,24 @@ export default function Home() {
 
   return (
     <>
-    <section>
-        <Image />
-    </section>
-    <section id="Information">
-        <section>
-            <Card1 />
-        </section>
-        <section>
-            <Card2 />
-        </section>
-        <section>
-            <Card3 />
-        </section>
-    </section>
-      <section id="Partners">
-        <Partners />
+    <div className='overflow-hidden'>
+      <section>
+          <Image />
       </section>
-      <section id="Subscribe">
-        <Subscribe />
-    </section>
+      <section id="Information" className="relative -mt-30 bg-[url('/Backgroud-page1.svg')] py-20 w-full min-h-screen">
+        <div className="relative container mt-40 mx-auto space-y-10 px-4">
+          <Card1 />
+          <Card2 />
+        </div>  
+      </section>
+          <Card3 />
+        <section id="Partners">
+          <Partners />
+        </section>
+        <section id="Subscribe">
+          <Subscribe />
+      </section>
+    </div>
     </>
   );
 }

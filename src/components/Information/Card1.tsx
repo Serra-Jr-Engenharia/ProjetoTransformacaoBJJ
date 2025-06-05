@@ -6,7 +6,7 @@ export default function Card1() {
           <h1 className="font-bold text-orange-500 text-3xl md:text-4xl leading-tight">
             INCLUSÃO,<br /> ESPORTE E <br /> EDUCAÇÃO
           </h1>
-          <p className="text-black text-base leading-relaxed">
+          <p className="text-black text-base leading-relaxed font-semibold">
             O projeto visa promover a inclusão social através do esporte, capacitando crianças, adolescentes e adultos,
             especialmente aqueles com necessidades especiais. Busca gerar saúde, equilíbrio psicológico e oportunidades
           </p>

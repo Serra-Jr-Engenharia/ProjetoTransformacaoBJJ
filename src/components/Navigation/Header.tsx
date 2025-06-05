@@ -14,9 +14,9 @@ export default function Header() {
           className="flex items-center gap-2 hover:opacity-80"
         >
           <Image 
-            src='LogoUerj.svg'
-            width={250}
-            height={250}
+            src='LogoProjeto.svg'
+            width={50}
+            height={50}
             alt="Logo Transformação"
           />
         </button>
