@@ -34,7 +34,7 @@ export default function Home() {
           <Image />
       </section>
       <section id="Information" className="relative -mt-30 bg-[url('/Backgroud-page1.svg')] py-20 w-full min-h-screen">
-        <div className="relative container mt-40 mx-auto space-y-10 px-4">
+        <div className="relative container mt-30 mx-auto space-y-10 px-4">
           <Card1 />
           <Card2 />
         </div>  

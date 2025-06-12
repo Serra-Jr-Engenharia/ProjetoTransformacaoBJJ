@@ -18,6 +18,7 @@ export default function Header() {
             width={50}
             height={50}
             alt="Logo Transformação"
+            
           />
         </button>
       </Link>
@@ -66,7 +67,7 @@ export default function Header() {
           <li>
             <Link href='/doacao'>
               <button
-                className="block text-black px-4 py-2 hover:text-[#2D875A] text-left lg:text-center"
+                className="block text-black px-4 py-2 hover:text-[#2D875A] text-left lg:text-center "
               >
                 DOAÇÃO
               </button>
