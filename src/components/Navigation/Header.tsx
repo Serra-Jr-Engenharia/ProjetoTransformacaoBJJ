@@ -1,20 +1,17 @@
 "use client";
-import Image from 'next/image';
-import Link from 'next/link';
-import { useState } from 'react';
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-
   return (
     <header className="flex flex-wrap justify-between items-center px-4 lg:px-24 py-4 bg-white border-b border-gray-200 relative z-50">
-      <Link href='/'>
-        <button
-          className="flex items-center gap-2 hover:opacity-80"
-        >
-          <Image 
-            src='LogoProjeto.svg'
+      <Link href="/">
+        <button className="flex items-center gap-2 hover:opacity-80 cursor-pointer">
+          <Image
+            src="LogoProjeto.svg"
             width={50}
             height={50}
             alt="Logo Transformação"
@@ -31,44 +28,46 @@ export default function Header() {
         ☰
       </button>
 
-      <nav className={`absolute top-[70px] left-0 w-full bg-white shadow-md lg:shadow-none lg:static lg:w-auto ${menuOpen ? 'block' : 'hidden'} lg:block`}>
+      <nav
+        className={`absolute top-[70px] left-0 w-full bg-white shadow-md lg:shadow-none lg:static lg:w-auto ${
+          menuOpen ? "block" : "hidden"
+        } lg:block`}
+      >
         <ul className="flex flex-col lg:flex-row lg:gap-10 text-lg lg:text-xl font-darker font-bold p-4 lg:p-0">
           <li>
-            <Link href=''>
-              <button
-                className="block text-black px-4 py-2 hover:text-[#2D875A] text-left lg:text-center"
-              >
+            <Link href="">
+              <button className="cursor-pointer block text-black px-4 py-2 hover:text-[#2D875A] text-left lg:text-center">
                 SOBRE NÓS
               </button>
             </Link>
           </li>
 
           <li>
-            <Link href=''>
-              <button
-                className="block text-black px-4 py-2 hover:text-[#2D875A] text-left lg:text-center"
-              >
+            <Link href="">
+              <button className="cursor-pointer block text-black px-4 py-2 hover:text-[#2D875A] text-left lg:text-center">
                 PARCEIROS
               </button>
             </Link>
           </li>
 
-
           <li>
-            <Link href='/nosso-projeto'>
-              <button
-                className="block text-black px-4 py-2 hover:text-[#2D875A] text-left lg:text-center"
-              >
+            <Link href="/nosso-projeto">
+              <button className="cursor-pointer block text-black px-4 py-2 hover:text-[#2D875A] text-left lg:text-center">
                 NOSSO PROJETO
               </button>
             </Link>
           </li>
-          
+
           <li>
+<<<<<<< HEAD
             <Link href='/doacao'>
               <button
                 className="block text-black px-4 py-2 hover:text-[#2D875A] text-left lg:text-center "
               >
+=======
+            <Link href="/doacao">
+              <button className="cursor-pointer block text-black px-4 py-2 hover:text-[#2D875A] text-left lg:text-center">
+>>>>>>> 2ad9f81399fde4106bed10f47a85ff284c58c597
                 DOAÇÃO
               </button>
             </Link>
