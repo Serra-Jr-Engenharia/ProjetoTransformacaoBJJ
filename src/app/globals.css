@@ -6,6 +6,10 @@
   --foreground: #171717;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @theme inline {
   --font-sans: "Poppins", sans-serif;
   --color-background: var(--background);

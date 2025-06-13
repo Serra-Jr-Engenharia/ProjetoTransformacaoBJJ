@@ -1,13 +1,32 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useRouter } from "next/router";
+import { useState, useEffect } from "react";
+
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // const router = useRouter();
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const scrollTo = params.get("scrollTo");
+
+    if (scrollTo) {
+      const section = document.getElementById(scrollTo);
+      if (section) {
+        setTimeout(() => {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, []);
+
   return (
-    <header className="flex flex-wrap justify-between items-center px-4 lg:px-24 py-4 bg-white border-b border-gray-200 relative z-50">
+    <header className="flex flex-wrap items-center px-4 lg:px-24 py-4 bg-white border-b border-gray-200 relative z-50">
+
       <Link href="/">
         <button className="flex items-center gap-2 hover:opacity-80 cursor-pointer">
           <Image
@@ -15,7 +34,6 @@ export default function Header() {
             width={50}
             height={50}
             alt="Logo Transformação"
-            
           />
         </button>
       </Link>
@@ -33,18 +51,18 @@ export default function Header() {
           menuOpen ? "block" : "hidden"
         } lg:block`}
       >
-        <ul className="flex flex-col lg:flex-row lg:gap-10 text-lg lg:text-xl font-darker font-bold p-4 lg:p-0">
+        <ul className="flex flex-col lg:flex-row lg:gap-1 text-lg lg:text-xl font-darker font-bold p-4 lg:p-0">
           <li>
-            <Link href="">
-              <button className="cursor-pointer block text-black px-4 py-2 hover:text-[#2D875A] text-left lg:text-center">
-                SOBRE NÓS
+            <Link href="#Information" scroll={true}>
+              <button className="cursor-pointer block text-black px-10 py-2 hover:text-[#2D875A] text-left lg:text-center">
+                SOBRE
               </button>
             </Link>
           </li>
 
           <li>
-            <Link href="">
-              <button className="cursor-pointer block text-black px-4 py-2 hover:text-[#2D875A] text-left lg:text-center">
+            <Link href="#Partners" scroll={true}>
+              <button className="cursor-pointer block text-black px-2 py-2 hover:text-[#2D875A] text-left lg:text-center">
                 PARCEIROS
               </button>
             </Link>
@@ -59,16 +77,10 @@ export default function Header() {
           </li>
 
           <li>
-<<<<<<< HEAD
             <Link href='/doacao'>
               <button
-                className="block text-black px-4 py-2 hover:text-[#2D875A] text-left lg:text-center "
-              >
-=======
-            <Link href="/doacao">
-              <button className="cursor-pointer block text-black px-4 py-2 hover:text-[#2D875A] text-left lg:text-center">
->>>>>>> 2ad9f81399fde4106bed10f47a85ff284c58c597
-                DOAÇÃO
+                className="block text-white rounded-lg px-4 py-2 hover:text-[#2D875A] text-left lg:text-center bg-orange-500">
+                QUERO DOAR
               </button>
             </Link>
           </li>

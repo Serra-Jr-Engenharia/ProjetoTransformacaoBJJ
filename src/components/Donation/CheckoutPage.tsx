@@ -8,7 +8,10 @@ import {
 } from "@stripe/react-stripe-js";
 import convertToSubcurrency from "@/lib/convertToSubcurrency";
 
-const CheckoutPage = ({ amount }: { amount: number }) => {
+import { DonationTypes } from "./DonationContainer";
+
+
+const CheckoutPage = ({ amount, paymentType }: { amount: number; paymentType: DonationTypes }) => {
   const stripe = useStripe();
   const elements = useElements();
 
@@ -24,7 +27,9 @@ const CheckoutPage = ({ amount }: { amount: number }) => {
     e.preventDefault();
     setLoading(true);
 
-    const res = await fetch("/api/create-payment-intent", {
+    const endpoint = paymentType === 'monthly' ? '/api/create-subscription' : '/api/create-payment-intent';
+
+    const res = await fetch(endpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -57,7 +62,7 @@ const CheckoutPage = ({ amount }: { amount: number }) => {
       elements,
       clientSecret,
       confirmParams: {
-        return_url: `http://localhost:3000/payment-success?amount=${amount}`,
+        return_url: `http://localhost:3001/payment-success?amount=${amount}`,
       },
     });
 
@@ -102,6 +107,7 @@ const CheckoutPage = ({ amount }: { amount: number }) => {
           className="text-white w-full p-5 bg-black mt-2 rounded-md font-bold disabled:opacity-50"
         >
           {loading ? "Carregando..." : "Continuar para pagamento"}
+          {paymentType === 'monthly' ? " Assinar" : " Pagar"}
         </button>
       </form>
     );

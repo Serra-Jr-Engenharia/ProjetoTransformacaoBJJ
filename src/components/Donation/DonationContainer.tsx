@@ -39,7 +39,7 @@ function DonationContainer() {
           Ótimo! Agora, basta preencher seus dados e finalizar.
         </h3>
         <hr className="bg-green-400 w-1/3 h-0.5 my-1 rounded-full border-0" />
-        <StripeForm amount={amount} />
+        <StripeForm amount={amount} paymentType={paymentType}/>
       </div>
 
       <div id="donation-summary" className="flex items-center justify-center">
