@@ -4,7 +4,7 @@ export default function Card1() {
 
         <div className="min-h-screen bg-white relative overflow-hidden">
             <div className="relative z-10 flex items-center justify-center min-h-screen px-8">
-                <div className="flex items-center justify-between max-w-6xl w-full">
+                <div className="flex items-center justify-between max-w-6xl w-full ">
    
                     <div className="max-w-md">
                         <p className="text-sm font-medium mb-2">
@@ -23,11 +23,11 @@ export default function Card1() {
     
                     </div>
 
-                    <div className="flex justify-center">
+
  
-                        <div className="relative">
-                            <div className="absolute inset-0 -z[-1000] bg-cover bg-center -mt-15"> 
-                                <Image
+                        <div className="flex-1 flex justify-center relative ">
+                            <div className="absolute inset-0 -z-1000 bg-cover bg-center -mt-15">
+                                <Image 
                                     src="./Background-page.svg"
                                     alt="Background Image"
                                     width={1600}
@@ -42,7 +42,7 @@ export default function Card1() {
                             </div>
                             
                         </div>
-                    </div>
+
                 </div>
             </div>
         </div>

@@ -2,19 +2,19 @@ import Image from 'next/image';
 
 export default function Card2() {
     return (
-        <div className="min-h-screen bg-white relative overflow-hidden ">
-            <div className="relative z-10 flex items-center justify-center min-h-screen px-8">
-                <div className="flex items-center justify-between max-w-6xl w-full gap-64">
-                    <div className="flex-1 flex justify-center relative">
-                        <div className="absolute inset-0 -z-1000 bg-cover bg-center "> 
-                            <Image
+        <div className="min-h-screen bg-white relative overflow-hidden w-[100vw]   flex items-center justify-center  ">
+            <div className="max-w-6xl w-full relative z-10 flex items-center justify-between min-h-screen mr-3  ">
+            
+                    <div className="flex-1 flex justify-center relative ">
+                        <div className=" absolute flex inset-0 -z-1000 bg-cover bg-center -mt-30"> 
+                            <Image 
                                 src="./Background-page.svg"
                                 alt="Background Image"
                                 width={1600}
                                 height={1600}
                             />
                         </div>
-                        <div className="w-[500px] h-[500px] rounded-full overflow-hidden shadow-2xl border-8 border-white">
+                        <div className="w-[500px] h-[500px] rounded-full overflow-hidden shadow-2xl border-8 border-white ">
                             <img 
                                 src="/feminino.svg"
                                 className="w-full h-full object-cover"
@@ -22,7 +22,7 @@ export default function Card2() {
                         </div>                      
                     </div>
 
-                    <div className="flex-1 max-w-md">
+                    <div className="flex-1 max-w-md ml-5">
                         <p className="font-semibold text-sm mb-2">
                             Empoderamento feminino
                         </p>
@@ -38,7 +38,7 @@ export default function Card2() {
                         </p>
     
                     </div>
-                </div>
+                
             </div>
         </div>
     );
