@@ -33,13 +33,13 @@ export default function Home() {
       <section>
           <Image />
       </section>
-      <section id="Information" className="relative -mt-30 bg-[url('/Background-page.svg')] py-20 w-full min-h-screen">
+      <section id="Information" className="relative -mt-30 bg-[url('/Background-page.svg')] sm: py-20 w-full min-h-screen">
         <div className="relative container mt-30 mx-auto space-y-10 px-4">
           <Card1 />
           <Card2 />
+          <Card3 />
         </div>  
       </section>
-          <Card3 />
         <section id="Partners">
           <Partners />
         </section>

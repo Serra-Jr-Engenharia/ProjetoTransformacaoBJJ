@@ -22,19 +22,22 @@ export default function DonationSelector({
     { value: "45", label: "R$45", oneTimeOnly: false },
     { value: "60", label: "R$60", oneTimeOnly: false },
     // TODO: Add Origin UI "Number input with chevrons" if price is 'Custom'
-    // { value: "CUSTOM", label: "R$ ?", oneTimeOnly: true },
+    { value: "CUSTOM", label: "R$ ?", oneTimeOnly: true },
   ];
 
-  const handleSelect = (value: number) => {
+  const handleSelect = (value: number | 'CUSTOM') => {
+    if (value === 'CUSTOM') {
+      setAmount(1313);
+      return;
+    }
+    // Handle custom amount logic here, e.g., open a modal or input field
     setAmount(value);
+    console.log("Custom amount selected");
+    return;
   };
 
   return (
     <>
-      <span className="w-3/4 text-center text-muted-foreground text-xs mb-4 mt-2 leading-4">
-        Ao escolher a opção "Mensal" a renovação do pagamento será automática.
-        Podendo ser cancelada a qualquer momento.
-      </span>
       <fieldset className="space-y-4 w-3/4">
         <legend className="text-foreground text-sm leading-none font-medium">
           Choose plan
@@ -45,13 +48,14 @@ export default function DonationSelector({
           // onChange={(value) => setAmount(Number(value))}
         >
           {items.map((item) => {
-            const data =
-              item.oneTimeOnly && paymentType === "monthly" ? null : item;
+            // const data =
+            //   item.oneTimeOnly && paymentType === "monthly" ? null : item;
 
             return (
-              data && (
+              item && (
                 <RadioAmountItem
                   key={item.label}
+                  currentAmount={amount}
                   label={item.label}
                   value={item.value}
                   // oneTimeOnly={item.oneTimeOnly || false}

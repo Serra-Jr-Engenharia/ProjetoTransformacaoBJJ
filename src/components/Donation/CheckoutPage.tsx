@@ -107,7 +107,7 @@ const CheckoutPage = ({ amount, paymentType }: { amount: number; paymentType: Do
           className="text-white w-full p-5 bg-black mt-2 rounded-md font-bold disabled:opacity-50"
         >
           {loading ? "Carregando..." : "Continuar para pagamento"}
-          {paymentType === 'monthly' ? " Assinar" : " Pagar"}
+          {/* {paymentType === 'monthly' ? " Assinar" : " Pagar"} */}
         </button>
       </form>
     );

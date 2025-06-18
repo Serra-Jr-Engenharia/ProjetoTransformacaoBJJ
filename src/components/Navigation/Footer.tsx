@@ -7,17 +7,10 @@ export default function Footer() {
         
         {/* Seção de links */}
         <div className="w-full md:w-auto text-center md:text-left space-y-2">
-          <h4 className="text-orange-500 font-bold text-lg uppercase tracking-wide">
-            Conheça
+          <h4 className="text-gray-500 font-semibold text-lg tracking-wide">
+            Todos os direitos reservados <br/>Ⓒ Serra Jr. Engenharia 2025
           </h4>
-          <ul className="text-sm text-gray-700 space-y-1">
-            <li>
-              <a href="#" className="hover:underline">Termos</a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">Política de Privacidade</a>
-            </li>
-          </ul>
+          
         </div>
 
         {/* Seção de contato */}
@@ -28,7 +21,7 @@ export default function Footer() {
 
           <div className="flex justify-center md:justify-end gap-4">
             <a
-              href="mailto:felipebraido11@outlook.com"
+              href="mailto:projetotransformacaonf@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-full bg-orange-100 hover:bg-orange-200 transition duration-200"

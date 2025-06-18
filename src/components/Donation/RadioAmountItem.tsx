@@ -1,14 +1,18 @@
+"use client";
 import React, { useId } from "react";
 import { RadioGroupItem } from "../ui/radio-group";
 import { Label } from "../ui/label";
 import { Badge } from "../ui/badge";
+import CurrencyInput from "../ui/input-with-currency";
 
 function RadioAmountItem({
+  currentAmount,
   value,
   label,
   oneTimeOnly = false,
   handleSelect,
 }: {
+  currentAmount: number;
   value: string;
   label: string;
   oneTimeOnly?: boolean;
@@ -18,8 +22,10 @@ function RadioAmountItem({
   return (
     <div
       key={`${id}-${value}`}
-      onClick={() => handleSelect(Number(value))}
-      className="border-input has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-accent relative flex flex-col gap-4 border p-8 outline-none first:rounded-t-md last:rounded-b-md has-data-[state=checked]:z-10"
+      onClick={() => handleSelect(Number(value) || "CUSTOM")}
+      className={`border-input has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-accent relative flex flex-col gap-4 border ${
+        value !== "CUSTOM" ? "p-8" : "px-8 py-0"
+      } outline-none first:rounded-t-md last:rounded-b-md has-data-[state=checked]:z-10`}
     >
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
@@ -33,7 +39,15 @@ function RadioAmountItem({
             className="inline-flex items-start text-3xl italic tracking-wide"
             htmlFor={`${id}-${value}`}
           >
-            {label}
+            {value !== "CUSTOM" ? (
+              label
+            ) : (
+              <CurrencyInput
+                currentAmount={value !== 'CUSTOM' ? currentAmount : 99}
+                handleSelect={handleSelect}
+              />
+            )}
+
             {value === "2" && <Badge className="ms-2 -mt-1">Popular</Badge>}
           </Label>
         </div>

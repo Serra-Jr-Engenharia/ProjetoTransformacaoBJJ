@@ -4,21 +4,38 @@ export default function Card1() {
 
         <div className="min-h-screen bg-white relative overflow-hidden">
             <div className="relative z-10 flex items-center justify-center min-h-screen px-8">
-                <div className="flex items-center justify-between max-w-6xl w-full ">
+                <div className="flex  items-center justify-between max-w-6xl w-full flex-col-reverse lg:flex-row sm:gap-12">
    
-                    <div className="max-w-md">
-                        <p className="text-sm font-medium mb-2">
+                    <div className="flex-1 max-w-md lg:max-w-lg xl:max-w-xl text-center lg:text-left px-4 lg:px-0">
+                        <p className="text-xs sm:text-sm font-medium mb-2 lg:mb-3">
                             Mais de 80 crianças matriculadas
                         </p>
                         
-                        <h1 className="text-6xl font-bold text-red-500 mb-6">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-red-500 mb-4 sm:mb-6 leading-tight">
                             INFANTIL
                         </h1>
                         
-                        <p className="text-base leading-relaxed mb-8">
-                            Each year we're kickstarting climate action by
-                            supporting 12 amazing community partners all
-                            over the UK.
+                        <p className="font-medium sm:font-semibold text-sm sm:text-base lg:text-lg leading-relaxed mb-6 sm:mb-8">
+                            AS AULAS DE JIU-JITSU INFANTIL DO PROJETO
+                            TRANSFORMAÇÃO OFERECEM UMA EXPERIÊNCIA
+                            INCLUSIVA E ENRIQUECEDORA PARA CRIANÇAS DE
+                            TODAS AS IDADES E HABILIDADES. COM MAIS DE 80
+                            CRIANÇAS MATRICULADAS ATUALMENTE, DIVIDIDAS
+                            EM DUAS TURMAS - INFANTIL 1, PARA CRIANÇAS ATÉ OS
+                            9 ANOS, E INFANTIL 2, DE 10 A 14 ANOS - O PROGRAMА
+                            PRIORIZA O DESENVOLVIMENTO FÍSICO, EMOCIONAL E
+                            SOCIAL DOS ALUNOS. A METODOLOGIA APLICADA NAS
+                            AULAS É CUIDADOSAMENTE ADAPTADA PARA CADA
+                            FAIXA ETÁRIA, FOCANDO NA CONSTRUÇÃO DE
+                            HABILIDADES TÉCNICAS E ÉTICAS, ALÉM DE PROMOVER
+                            VALORES COMO RESPEITO, DISCIPLINA E TRABALHO EМ
+                            EQUIPE. O PROJETO TRANSFORMAÇÃO TEM SE
+                            DESTACADO PELO TREINAMENTO INCLUSIVO,
+                            ACOLHENDO ALUNOS COM NECESSIDADES ESPECIAIS,
+                            COMO AQUELES NO ESPECTRO AUTISTA (TEA) E ALUNOS
+                            COM SÍNDROME DE DOWN, PROPORCIONANDO-LHES
+                            UMA OPORTUNIDADE ÚNICA DE DESENVOLVIMENTO E
+                            INTEGRAÇÃO NA COMUNIDADE.
                         </p>
     
                     </div>
@@ -26,7 +43,7 @@ export default function Card1() {
 
  
                         <div className="flex-1 flex justify-center relative ">
-                            <div className="absolute inset-0 -z-1000 bg-cover bg-center -mt-15">
+                            <div className="absolute inset-0 -z-1000 bg-cover bg-center -mt-15 border border-red-500 w-[1195px] h-[778px] ">
                                 <Image 
                                     src="./Background-page.svg"
                                     alt="Background Image"
@@ -34,7 +51,7 @@ export default function Card1() {
                                     height={1600}
                                 />
                             </div>   
-                            <div className="w-[500px] h-[500px] rounded-full overflow-hidden shadow-2xl border-8 border-white">
+                            <div className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[450px] lg:h-[450px] xl:w-[500px] xl:h-[500px] rounded-full overflow-hidden shadow-2xl border-8 border-white">
                                 <img 
                                     src="/infantil.svg"
                                     className="w-full h-full object-cover"

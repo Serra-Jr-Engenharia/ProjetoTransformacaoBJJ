@@ -15,6 +15,7 @@ export default function PaymentTypeSelector({
   const id = useId();
 
   return (
+    <>
     <div className="bg-input/50 border inline-flex h-9 rounded-md p-0.5 mt-4">
       <RadioGroup
         value={type}
@@ -40,5 +41,11 @@ export default function PaymentTypeSelector({
         </label>
       </RadioGroup>
     </div>
+    
+      <span className="w-3/4 text-center text-muted-foreground text-xs mb-4 mt-2 leading-4">
+        Ao escolher a opção "Mensal" a renovação do pagamento será automática.
+        Podendo ser cancelada a qualquer momento.
+      </span>
+      </>
   );
 }
