@@ -6,6 +6,13 @@
   --foreground: #171717;
 }
 
+@theme {
+  --breakpoint-ms: 320px;
+  --breakpoint-mm: 375px;
+  --breakpoint-ml: 425px;
+  --breakpoint-mb: 480px;
+}
+
 html {
   scroll-behavior: smooth;
 }

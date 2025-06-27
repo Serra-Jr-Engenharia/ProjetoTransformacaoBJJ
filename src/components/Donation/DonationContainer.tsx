@@ -14,7 +14,7 @@ function DonationContainer() {
   return (
     <div
       id="donation-container"
-      className="grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-1 gap-4 sm:gap-6 lg:gap-8 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+      className="grid grid-cols-1 lg:grid-cols-3 mt-4 gap-4 sm:gap-6 lg:gap-8 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
     >
       <div
         id="donation-amount"
@@ -33,7 +33,7 @@ function DonationContainer() {
       </div>
       <div
         id="info-form"
-        className="p-4 sm:p-6 rounded-lg flex items-center justify-start flex-col lg:col-span-2 lg:col-start-2"
+        className="p-4 sm:p-6 rounded-lg flex items-center justify-start flex-col"
       >
         <h3 className="text-center w-full uppercase font-bold text-base sm:text-lg mb-2">
           Ótimo! Agora, basta preencher seus dados e finalizar.
@@ -43,7 +43,7 @@ function DonationContainer() {
       </div>
 
       {/* Card de Doação Selecionada */}
-      <div id="donation-summary" className="flex items-start justify-center md:col-span-2 lg:col-span-1 lg:justify-center px-4 mb-4">
+      <div id="donation-summary" className="flex items-start justify-center lg:justify-center px-4 mb-4">
         <div className="p-4 sm:p-6 md:p-8 w-full max-w-sm sm:max-w-md md:max-w-lg lg:w-96 bg-card rounded-lg flex items-center gap-2 flex-col border-2 border-green-400">
           <h3 className="text-center w-full uppercase font-bold text-base sm:text-lg">
             Doação Selecionada:

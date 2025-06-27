@@ -18,9 +18,8 @@ export default function Component({
 }) {
   return (
     <NumberField
-      defaultValue={99}
       value={currentAmount}
-      onChange={(value) => handleSelect(value)}
+      onChange={(value) => handleSelect(typeof value === "number" ? value : "CUSTOM")}
       className
       formatOptions={{
         style: "currency",
@@ -30,15 +29,12 @@ export default function Component({
     >
       <div className="">
         <Label className="text-foreground text-sm font-medium m-0">
-          Custom Amount (traduzir dps kk)
+          Valor personalizado
         </Label>
         <Group className="border-input outline-none data-focus-within:border-ring data-focus-within:ring-ring/50 data-focus-within:has-aria-invalid:ring-destructive/20 dark:data-focus-within:has-aria-invalid:ring-destructive/40 data-focus-within:has-aria-invalid:border-destructive relative inline-flex w-full items-center overflow-hidden rounded-md border text-sm whitespace-nowrap shadow-xs transition-[color,box-shadow] data-disabled:opacity-50 data-focus-within:ring-[3px]">
           <Input
             // value={currentAmount}
-            onChange={(e) => {
-              console.log(e.target.value);
-              handleSelect(parseInt(e.target.value));
-            }}
+            onFocus={() => handleSelect("CUSTOM")}
             className="bg-background text-foreground flex-1 px-3 py-2 tabular-nums"
           />
           <div className="flex h-[calc(100%+2px)] flex-col">

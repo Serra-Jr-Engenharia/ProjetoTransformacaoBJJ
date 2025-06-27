@@ -10,8 +10,7 @@ export default function Subscribe() {
           </h1>
           <Link href='/doacao'>
             <button
-              className="bg-[orange] hover:bg-orange-600 text-white font-semibold px-6 py-2 rounded text-sm transition-colors duration-200"
-            >
+              className="bg-[orange] hover:bg-orange-600 text-white font-semibold px-6 py-2 rounded text-sm transition-colors duration-200 cursor-pointer">
               Doe Agora
             </button>
           </Link>

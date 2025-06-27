@@ -2,7 +2,8 @@ import Link from "next/link";
 
 export default function Card3() {
   return (
-    <div className="bg-white px-6 py-10 max-w-6xl mx-auto rounded-2xl shadow-lg mt-[60px] mb-[60px] flex flex-col lg:flex-row gap-6">
+    <div className="bg-white px-6 py-10 max-w-6xl mx-auto rounded-2xl shadow-lg mb-[60px] flex flex-col lg:flex-row gap-6">
+      {/* mt-[60px] */}
       <h1 className="text-orange-500 font-bold text-4xl lg:w-1/3">
 
         NOSSO

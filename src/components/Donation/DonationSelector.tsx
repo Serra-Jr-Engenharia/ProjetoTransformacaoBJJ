@@ -25,13 +25,16 @@ export default function DonationSelector({
     { value: "CUSTOM", label: "R$ ?", oneTimeOnly: true },
   ];
 
+  const [selectedValue, setSelectedValue] = useState("30");
+
   const handleSelect = (value: number | 'CUSTOM') => {
     if (value === 'CUSTOM') {
-      setAmount(1313);
+      setSelectedValue("CUSTOM");
       return;
     }
     // Handle custom amount logic here, e.g., open a modal or input field
     setAmount(value);
+    setSelectedValue(value.toString());
     console.log("Custom amount selected");
     return;
   };
@@ -39,12 +42,14 @@ export default function DonationSelector({
   return (
     <>
       <fieldset className="space-y-4 w-3/4">
-        <legend className="text-foreground text-sm leading-none font-medium">
+        {/* <legend className="text-foreground text-sm leading-none font-medium">
           Choose plan
-        </legend>
+        </legend> */}
         <RadioGroup
           className="gap-0 -space-y-px rounded-md shadow-xs"
-          defaultValue="30"
+          // defaultValue="30"
+          value={selectedValue}
+          onValueChange={setSelectedValue}
           // onChange={(value) => setAmount(Number(value))}
         >
           {items.map((item) => {

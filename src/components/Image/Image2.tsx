@@ -9,7 +9,7 @@ export default function Image() {
           NOSSO PROJETO
         </p>
 
-        <p className="text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-semibold text-center leading-relaxed max-w-4xl">
+        <p className="hidden md:block text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-semibold text-center leading-relaxed max-w-4xl">
           O Projeto Transformação é um exemplo inspirador de como uma iniciativa
           social pode impactar positivamente a vida de muitas pessoas. Fundado
           em 11 de abril de 2005, no bairro da Lagoinha, e inicialmente

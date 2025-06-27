@@ -4,7 +4,7 @@ import React from 'react'
 function Callout() {
   return (
     <div id="info-container" className="w-3/4 grid grid-cols-2 gap-2 my-4 max-md:grid-rows-2 max-md:grid-cols-1">
-          <div className="flex flex-row gap-3 sm:gap-4 items-start">
+          <div className="flex flex-row sm:gap-4 items-start">
             <div className='flex-shrink-0'>
               <HandshakeIcon size={80} className="w-12 h-12 sm:w-16 sm:h-16" strokeWidth={2} />
             </div>
