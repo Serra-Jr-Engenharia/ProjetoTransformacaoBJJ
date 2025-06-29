@@ -8,19 +8,21 @@ import {
   Label,
   NumberField,
 } from "react-aria-components";
+import { useDonationContext } from "../Donation/DonationContainer";
 
-export default function Component({
-  currentAmount,
+export default function CurrencyInput({
+  isCustomSelected,
   handleSelect,
 }: {
-  currentAmount: number;
+  isCustomSelected: boolean;
   handleSelect: (value: number | "CUSTOM") => void;
 }) {
+  const { amount, setAmount} = useDonationContext()
   return (
     <NumberField
-      value={currentAmount}
-      onChange={(value) => handleSelect(typeof value === "number" ? value : "CUSTOM")}
-      className
+      value={isCustomSelected ? amount : 0}
+      isDisabled={!isCustomSelected}
+      onChange={(value) => handleSelect(value > 0 ? value : 1)}
       formatOptions={{
         style: "currency",
         currency: "BRL",
@@ -28,13 +30,12 @@ export default function Component({
       }}
     >
       <div className="">
-        <Label className="text-foreground text-sm font-medium m-0">
+        <Label className="text-foreground text-sm font-medium">
           Valor personalizado
-        </Label>
-        <Group className="border-input outline-none data-focus-within:border-ring data-focus-within:ring-ring/50 data-focus-within:has-aria-invalid:ring-destructive/20 dark:data-focus-within:has-aria-invalid:ring-destructive/40 data-focus-within:has-aria-invalid:border-destructive relative inline-flex w-full items-center overflow-hidden rounded-md border text-sm whitespace-nowrap shadow-xs transition-[color,box-shadow] data-disabled:opacity-50 data-focus-within:ring-[3px]">
+        <Group className="border-input outline-none data-focus-within:border-ring data-focus-within:ring-ring/50 data-focus-within:has-aria-invalid:ring-destructive/20 dark:data-focus-within:has-aria-invalid:ring-destructive/40 data-focus-within:has-aria-invalid:border-destructive relative flex items-center overflow-hidden rounded-md border text-sm whitespace-nowrap shadow-xs transition-[color,box-shadow] data-disabled:opacity-50 data-focus-within:ring-[3px]">
           <Input
-            // value={currentAmount}
-            onFocus={() => handleSelect("CUSTOM")}
+            // value={amount}
+            // onFocus={() => handleSelect(123)}
             className="bg-background text-foreground flex-1 px-3 py-2 tabular-nums"
           />
           <div className="flex h-[calc(100%+2px)] flex-col">
@@ -52,6 +53,7 @@ export default function Component({
             </Button>
           </div>
         </Group>
+        </Label>
       </div>
     </NumberField>
   );

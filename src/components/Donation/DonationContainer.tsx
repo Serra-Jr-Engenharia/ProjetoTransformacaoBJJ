@@ -1,9 +1,20 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { createContext, useState, useContext } from "react";
 import StripeForm from "./StripeForm";
 import DonationSelector from "./DonationSelector";
 import PaymentTypeSelector from "./PaymentTypeSelector";
+
+interface DonationContextType {
+ amount: number;
+ setAmount: (amount: number) => void;
+ paymentType: DonationTypes;
+ setPaymentType: (type: DonationTypes) => void;
+}
+
+const DonationContext = createContext<DonationContextType | undefined>(
+ undefined
+);
 
 export type DonationTypes = "one-time" | "monthly";
 
@@ -12,24 +23,21 @@ function DonationContainer() {
   const [paymentType, setPaymentType] = useState<DonationTypes>("one-time");
 // grid-rows-1 w-11/12 max-md:grid-cols-1 max-md:grid-rows-3
   return (
+    <DonationContext.Provider value={{ amount, setAmount, paymentType, setPaymentType }}>
     <div
       id="donation-container"
       className="grid grid-cols-1 lg:grid-cols-3 mt-4 gap-4 sm:gap-6 lg:gap-8 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
     >
       <div
         id="donation-amount"
-        className="min-h-48 p-4 sm:p-6 rounded-lg flex items-center justify-start flex-col "
+        className="min-h-48 p-4 sm:p-6 rounded-lg flex items-center justify-start flex-col"
       >
         <h3 className="text-center w-full sm:w-3/4 uppercase font-bold text-base sm:text-lg mb-2">
           Escolha o valor de doação:
         </h3>
         <hr className="bg-green-400 w-1/3 h-0.5 my-1 rounded-full border-0 mb-4" />
         {/* <PaymentTypeSelector type={paymentType} setType={setPaymentType} /> */}
-        <DonationSelector
-          amount={amount}
-          setAmount={setAmount}
-          paymentType={paymentType}
-        />
+ <DonationSelector />
       </div>
       <div
         id="info-form"
@@ -39,7 +47,7 @@ function DonationContainer() {
           Ótimo! Agora, basta preencher seus dados e finalizar.
         </h3>
         <hr className="bg-green-400 w-1/3 h-0.5 my-1 rounded-full border-0 mb-4" />
-        <StripeForm amount={amount} paymentType={paymentType}/>
+ <StripeForm />
       </div>
 
       {/* Card de Doação Selecionada */}
@@ -56,7 +64,7 @@ function DonationContainer() {
               Valor
             </span>
             <p className="w-full italic">
-              <span className="text-xl sm:text-2xl font-bold">R$ {amount},00</span>
+              <span className="text-xl sm:text-2xl font-bold">R$ {amount.toFixed(2).replace(".", ",")}</span>
               <span className="text-xs sm:text-sm text-muted-foreground">
                 {paymentType === "monthly" && "/ mês"}
               </span>
@@ -74,7 +82,15 @@ function DonationContainer() {
         </div>
       </div>
     </div>
+ </DonationContext.Provider>
   );
 }
 
+export const useDonationContext = () => {
+ const context = useContext(DonationContext);
+ if (!context) {
+ throw new Error("useDonationContext must be used within a DonationProvider");
+ }
+ return context;
+};
 export default DonationContainer;

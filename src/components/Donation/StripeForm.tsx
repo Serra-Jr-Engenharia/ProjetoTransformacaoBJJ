@@ -5,7 +5,7 @@ import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import convertToSubcurrency from "@/lib/convertToSubcurrency";
 
-import { DonationTypes } from "./DonationContainer";
+import { DonationTypes, useDonationContext } from "./DonationContainer";
 
 
 if (process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY === undefined) {
@@ -15,9 +15,10 @@ const stripePromise = loadStripe(
   process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
 );
 
-function StripeForm({ amount, paymentType }: { amount: number; paymentType: DonationTypes }) {
+function StripeForm({ paymentType = 'one-time' }: { paymentType?: DonationTypes }) {
+  const {amount, setAmount} = useDonationContext()
   if (amount <= 0) {
-    amount = 45;
+    setAmount(45);
   }
   const mode = paymentType === 'monthly' ? 'subscription' : 'payment';
   

@@ -7,15 +7,10 @@ import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import PaymentTypeSelector from "@/components/Donation/PaymentTypeSelector";
 import RadioAmountItem from "./RadioAmountItem";
+import { useDonationContext } from "./DonationContainer";
 
-export default function DonationSelector({
-  amount,
-  setAmount,
-  paymentType,
-}: {
-  amount: number;
-  setAmount: any;
-  paymentType: "one-time" | "monthly";
+export default function DonationSelector({paymentType = 'one-time'}: {
+  paymentType?: "one-time" | "monthly";
 }) {
   const items = [
     { value: "30", label: "R$30", oneTimeOnly: false },
@@ -25,18 +20,14 @@ export default function DonationSelector({
     { value: "CUSTOM", label: "R$ ?", oneTimeOnly: true },
   ];
 
-  const [selectedValue, setSelectedValue] = useState("30");
-
-  const handleSelect = (value: number | 'CUSTOM') => {
-    if (value === 'CUSTOM') {
-      setSelectedValue("CUSTOM");
+  const [selectedFormItem, setSelectedFormItem] = useState("30");
+  const { amount, setAmount } = useDonationContext()
+  const handleSelect = (value: number | "CUSTOM") => {
+    
+    if (typeof value === "number") {
+      setAmount(value);
       return;
     }
-    // Handle custom amount logic here, e.g., open a modal or input field
-    setAmount(value);
-    setSelectedValue(value.toString());
-    console.log("Custom amount selected");
-    return;
   };
 
   return (
@@ -48,9 +39,9 @@ export default function DonationSelector({
         <RadioGroup
           className="gap-0 -space-y-px rounded-md shadow-xs"
           // defaultValue="30"
-          value={selectedValue}
-          onValueChange={setSelectedValue}
-          // onChange={(value) => setAmount(Number(value))}
+          value={selectedFormItem}
+          onValueChange={setSelectedFormItem}
+        // onChange={(value) => setAmount(Number(value))}
         >
           {items.map((item) => {
             // const data =
@@ -63,8 +54,9 @@ export default function DonationSelector({
                   currentAmount={amount}
                   label={item.label}
                   value={item.value}
+                  selectedFormItem={selectedFormItem}
                   // oneTimeOnly={item.oneTimeOnly || false}
-                  handleSelect={handleSelect}
+                  handleSelect={(val: number | 'CUSTOM') => handleSelect(val)}
                 />
               )
             );
