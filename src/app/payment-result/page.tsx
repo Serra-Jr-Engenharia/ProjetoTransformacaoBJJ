@@ -30,7 +30,7 @@ export default function PaymentResult({
 
   if (status === "loading") {
     return (
-      <main className="max-w-6xl mx-auto p-10 text-white text-center border m-10 rounded-md bg-gray-500">
+      <main className="max-w-6xl mx-auto p-10 text-gray-700 text-center border m-10 rounded-md bg-gray-200">
         <h2 className="text-2xl">Verificando pagamento...</h2>
       </main>
     )
@@ -40,10 +40,8 @@ export default function PaymentResult({
 
   return (
     <main
-      className={`max-w-6xl mx-auto p-10 text-white text-center border m-10 rounded-md ${
-        isSuccess
-          ? "bg-gradient-to-tr from-blue-500 to-purple-500"
-          : "bg-gradient-to-tr from-red-500 to-pink-500"
+      className={`max-w-6xl mx-auto p-10 text-gray-800 text-center border m-10 rounded-md ${
+        isSuccess ? "bg-blue-100" : "bg-green-100"
       }`}
     >
       <div className="mb-5">
@@ -57,11 +55,11 @@ export default function PaymentResult({
         </h2>
 
         {isSuccess ? (
-          <div className="bg-white p-2 rounded-md text-purple-500 mt-5 text-4xl font-bold">
+          <div className="bg-white p-2 rounded-md text-sky-800 mt-5 text-4xl font-bold">
             R${searchParams.amount}
           </div>
         ) : (
-          <div className="bg-white p-2 rounded-md text-red-500 mt-5 text-2xl font-semibold">
+          <div className="bg-white p-2 rounded-md text-green-700 mt-5 text-2xl font-semibold">
             Verifique os dados do cartão ou tente novamente mais tarde.
           </div>
         )}
@@ -70,8 +68,8 @@ export default function PaymentResult({
           <a
             href="/"
             className={`inline-block bg-white ${
-              isSuccess ? "text-purple-600" : "text-red-600"
-            } font-bold py-2 px-4 rounded-md hover:bg-opacity-80 transition`}
+              isSuccess ? "text-sky-800" : "text-green-700"
+            } font-bold py-2 px-4 rounded-md hover:bg-gray-100 transition`}
           >
             Voltar à página inicial
           </a>
