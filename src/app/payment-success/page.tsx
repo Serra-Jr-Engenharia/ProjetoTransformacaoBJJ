@@ -1,8 +1,22 @@
+'use client'
+
+import { useEffect } from "react";
+
 export default function PaymentSuccess({
   searchParams: { amount },
 }: {
   searchParams: { amount: string };
 }) {
+
+  useEffect(() => {
+    const url = new URL(window.location.href)
+    url.searchParams.delete("payment_intent")
+    url.searchParams.delete("payment_intent_client_secret")
+    url.searchParams.delete("redirect_status")
+
+    window.history.replaceState({}, '', url.toString())
+  }, [])
+
   return (
     <main className="max-w-6xl mx-auto p-10 text-white text-center border m-10 rounded-md bg-gradient-to-tr from-blue-500 to-purple-500">
       <div className="mb-10">
