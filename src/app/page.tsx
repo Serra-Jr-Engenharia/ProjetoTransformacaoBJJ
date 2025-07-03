@@ -33,7 +33,7 @@ export default function Home() {
       <section>
           <Image />
       </section>
-      <section id="Information" className="relative -mt-25 bg-[url('/Background-page.svg')] ml:-mt-35 mm:-mt-40 py-20 w-full min-h-screen ">
+      <section id="Information" className="relative -mt-25 bg-[url('/Background-page.svg')] ml:-mt-35 mm:-mt-30 py-20 w-full min-h-screen ">
         <div className="relative container mt-30 mx-auto space-y-10 px-4">
           <Card1 />
           <Card2 />
