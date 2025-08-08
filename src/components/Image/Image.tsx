@@ -21,7 +21,7 @@ export default function Image() {
         
         <Link href="/nosso-instituto">
         <button
-          className="hidden md:flex items-center justify-center px-6 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-xl transition text-xs
+          className="hidden md:flex items-center justify-center mt-2 px-6 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-xl transition text-xs
            ml:text-sm md:text-base lg:text-base h-8 ml:h-9 md:h-11 lg:h-12 w-62 z-50 cursor-pointer"
         >
           Conheça nosso Instituto
