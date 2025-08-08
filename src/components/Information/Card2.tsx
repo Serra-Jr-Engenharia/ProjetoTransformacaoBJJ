@@ -6,9 +6,9 @@ export default function Card2() {
                     NOSSA<br />HISTORIA
                 </h1>
                 <p className="text-justify text-black font-semibold py-4">
-                    O Projeto Transformação nasceu com o propósito de levar o Jiu-Jitsu e outras artes marciais à comunidade do bairro da Lagoinha, 
+                    O Instituto Transformação nasceu com o propósito de levar o Jiu-Jitsu e outras artes marciais à comunidade do bairro da Lagoinha, 
                     promovendo inclusão social, disciplina e crescimento pessoal. Mesmo após desafios, como a interrupção das atividades em 2011, 
-                    o projeto perseverou, encontrando novos espaços e expandindo suas modalidades para incluir Muay Thai e musculação.
+                    o Instituto perseverou, encontrando novos espaços e expandindo suas modalidades para incluir Muay Thai e musculação.
                     Hoje, a iniciativa não é apenas um centro de treinamento, mas um símbolo de superação e comprometimento, formando atletas, 
                     cidadãos exemplares e inspirando toda a comunidade. Investir no esporte e na educação é investir em um futuro melhor!
                 </p>

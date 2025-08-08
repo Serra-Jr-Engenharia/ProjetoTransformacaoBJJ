@@ -20,7 +20,7 @@ export default function Card4() {
                         <img 
                             src="/judo-pilates.svg"
                             className="w-full h-full object-cover"
-                            alt="Judô e Pilates"
+                            alt="Judô e Ginástica"
                         />
                     </div>                      
                 </div>
@@ -32,7 +32,7 @@ export default function Card4() {
                     </p>
                     
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-red-500 mb-4 sm:mb-6 leading-tight">
-                        JUDÔ E PILATES
+                        JUDÔ E GINÁSTICA
                     </h1>
                     
                     <p className="font-medium sm:font-semibold text-sm sm:text-base lg:text-lg leading-relaxed mb-6 sm:mb-8">

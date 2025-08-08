@@ -8,7 +8,7 @@ import Card3 from "@/components/Project/Card3";
 import Card4 from "@/components/Project/Card4";
 
 
-export default function Nosso_projeto() {
+export default function Nosso_instituto() {
   return (
     <div className="overflow-hidden">
       <section>

@@ -101,10 +101,10 @@ export default function Header() {
             </li>
 
             <li className="md:flex md:justify-end ml:flex ml:justify-end mm:flex mm:justify-end ms:flex ms:justify-end">
-              <Link href="/nosso-projeto">
+              <Link href="/nosso-instituto">
                 <button className="cursor-pointer block text-black px-2 py-2 transition-color duration-500 hover:text-[#2D875A] text-left lg:text-center"
                 onClick={handleLinkClick}>
-                  NOSSO PROJETO
+                  NOSSO INSTITUTO
                 </button>
               </Link>
             </li>
