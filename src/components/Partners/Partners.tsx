@@ -8,6 +8,36 @@ import { BsPersonCircle } from "react-icons/bs";
 
 const developers = [
   {
+    name: "André Barros",
+    image: "/AndreBarros.png",
+    link: "https://github.com/andreb308",
+  },
+  {
+    name: "Davi",
+    image: "/Davi.png",
+    link: "",
+  },
+  {
+    name: "Felipe Carrancho",
+    image: "/FelipeCarrancho.png",
+    link: "https://github.com/FelipeCarrancho",
+  },
+  {
+    name: "Gabriel",
+    image: "/Gabriel.png",
+    link: "",
+  },
+  {
+    name: "Gabriel Gonçalves",
+    image: "",
+    link: "",
+  },
+  {
+    name: "Gabrielle Oliveira",
+    image: "/Gabrielle.png",
+    link: "https://github.com/gabriellefoliv",
+  },
+  {
     name: "Gustavo Curty",
     image: "/Gustavo.jpg",
     link: "https://github.com/Gustavocurty",
@@ -17,37 +47,8 @@ const developers = [
     image: "/LuisFelipe.png",
     link: "https://github.com/BraidoLuis",
   },
-  {
-    name: "Felipe Carrancho",
-    image: "/FelipeCarrancho.png",
-    link: "https://github.com/FelipeCarrancho",
-  },
-  {
-    name: "André Barros",
-    image: "/AndreBarros.png",
-    link: "https://github.com/andreb308",
-  },
-  {
-    name: "Gabrielle Oliveira",
-    image: "/Gabrielle.png",
-    link: "https://github.com/gabriellefoliv",
-  },
-  {
-    name: "Gabriel",
-    image: "/Gabriel.png",
-    link: "",
-  },
-  {
-    name: "Davi",
-    image: "/Davi.png",
-    link: "",
-  },
-  {
-    name: "Gabriel Gonçalves",
-    image: "",
-    link: "",
-  },
 ];
+
 
 export default function Partners() {
   return (
