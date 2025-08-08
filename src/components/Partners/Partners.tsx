@@ -48,7 +48,7 @@ const developers = [
   },
   {
     name: "Gustavo Curty",
-    image: "/GustavoCurty.jpg",
+    image: "/GustavoCurty.JPG",
     link: "https://github.com/Gustavocurty",
   },
   {
