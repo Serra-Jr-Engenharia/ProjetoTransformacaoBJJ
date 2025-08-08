@@ -36,26 +36,15 @@ export default function Card4() {
                     </h1>
                     
                     <p className="font-medium sm:font-semibold text-sm sm:text-base lg:text-lg leading-relaxed mb-6 sm:mb-8">
-                        A TURMA DE JIU-JITSU ADULTO MISTO É
-                        DIRECIONADA PARA HOMENS E MULHERES QUE
-                        BUSCAM APRIMORAR SUAS HABILIDADES
-                        NESTA ARTE MARCIAL E ALCANÇAR UM NÍVEL
-                        COMPETITIVO EXCEPCIONAL.
-                        NOSSAS AULAS MISTAS OFERECEM UMA
-                        PLATAFORMA ÚNICA PARA O
-                        DESENVOLVIMENTO DO JIU-JITSU DE ALTO
-                        NÍVEL, ONDE OS PARTICIPANTES TÊM A
-                        OPORTUNIDADE DE TREINAR EM CONJUNTO E
-                        COMPARTILHAR EXPERIÊNCIAS, PROMOVENDO
-                        UM AMBIENTE DE APRENDIZADO
-                        COLABORATIVO E ENRIQUECEDOR.
-                        ALÉM DISSO, TEMOS O COMPROMISSO DE
-                        OFERECER UM AMBIENTE INCLUSIVO. NOSSA
-                        METODOLOGIA É ADAPTADA PARA ATENDER ÀS
-                        NECESSIDADES DE ALUNOS COM DEFICIÊNCIA,
-                        GARANTINDO QUE TODOS TENHAM ACESSO
-                        IGUALITÁRIO AO APRENDIZADO E AO
-                        DESENVOLVIMENTO ATLÉTICO.
+                        EM 2024, O PROJETO TRANSFORMAÇÃO AMPLIOU
+                        SUAS ATIVIDADES. ALÉM DAS AULAS DE JIUJITSU, PASSAMOS A OFERTAR TAMBÉM AULAS DE
+                        JUDÔ EM PARCERIA COM O INSTITUTO TIAGO
+                        CAMILO E AULAS DE PILATES. ESSA EXPANSÃO
+                        REFLETE O COMPROMISSO DO PROJETO EM
+                        OFERECER BEM-ESTAR INTEGRAL À SUA
+                        COMUNIDADE, COMBINANDO TREINAMENTO
+                        FÍSICO DE ALTA QUALIDADE COM CUIDADOS COM
+                        A MENTE E O CORPO.
                     </p>
 
                 </div>
