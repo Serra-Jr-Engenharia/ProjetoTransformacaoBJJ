@@ -8,14 +8,14 @@ export default function Card1() {
             INCLUSÃO,<br /> ESPORTE E <br /> EDUCAÇÃO
           </h1>
           <p className="text-black text-base leading-relaxed font-semibold">
-            O projeto visa promover a inclusão social através do esporte, capacitando crianças, adolescentes e adultos,
+            O Instituto visa promover a inclusão social através do esporte, capacitando crianças, adolescentes e adultos,
             especialmente aqueles com necessidades especiais. Busca gerar saúde, equilíbrio psicológico e oportunidades
           </p>
           
         </div>
 
         <div className="md:w-1/2 flex justify-center">
-          <img src="/Imagemcard1.svg" alt="Crianças do projeto" className="rounded-xl shadow-md w-[500px] h-[300px] object-cover" />
+          <img src="/Imagemcard1.svg" alt="Crianças do Instituto" className="rounded-xl shadow-md w-[500px] h-[300px] object-cover" />
         </div>
       </div>
 
