@@ -16,7 +16,7 @@ export default function Footer() {
         {/* Seção de contato */}
         <div className="w-full md:w-auto text-center md:text-right space-y-4">
           <h4 className="text-orange-500 font-bold text-lg uppercase tracking-wide">
-            Entre em Contato
+            Entre em Contato Conosco
           </h4>
 
           <div className="flex justify-center md:justify-end gap-4">
