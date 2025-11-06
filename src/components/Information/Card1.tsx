@@ -29,12 +29,8 @@ export default function Card1() {
           <p className="text-sm text-black font-semibold">Alunos pelo Brasil</p>
         </div>
         <div className="flex flex-col items-center text-center">
-          <img src="/250.svg" alt="Bolsas de estudo" className="w-[100px] h-[100px]" />
-          <p className="text-sm text-black font-semibold">Alunos contemplados com bolsas de estudos</p>
-        </div>
-        <div className="flex flex-col items-center text-center">
           <img src="/3000.svg" alt="Medalhas conquistadas" className="w-[100px] h-[100px]" />
-          <p className="text-sm text-black font-semibold">Medalhas conquistadas nos últimos 5 anos</p>
+          <p className="text-sm text-black font-semibold">Medalhas conquistadas nos últimos anos</p>
         </div>
       </div>
 
