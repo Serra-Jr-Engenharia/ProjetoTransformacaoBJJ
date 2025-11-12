@@ -80,22 +80,46 @@ export default function Partners() {
           }}
         >
           <SwiperSlide>
-            <img src="/LogoUerj.svg" alt="Parceiro 1" className="h-20 mx-auto" />
+            <img
+              src="/LogoUerj.svg"
+              alt="Parceiro 1"
+              className="h-20 mx-auto"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/LogoSparta.svg" alt="Parceiro 2" className="h-20 mx-auto" />
+            <img
+              src="/LogoSparta.svg"
+              alt="Parceiro 2"
+              className="h-20 mx-auto"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/LogoFermoplast.svg" alt="Parceiro 3" className="h-20 mx-auto" />
+            <img
+              src="/LogoFermoplast.svg"
+              alt="Parceiro 3"
+              className="h-20 mx-auto"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/LogoPontes.svg" alt="Parceiro 4" className="h-20 mx-auto" />
+            <img
+              src="/LogoPontes.svg"
+              alt="Parceiro 4"
+              className="h-20 mx-auto"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/LogoSpartanus.svg" alt="Parceiro 5" className="h-20 mx-auto" />
+            <img
+              src="/LogoSpartanus.svg"
+              alt="Parceiro 5"
+              className="h-20 mx-auto"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/LogoSerraJr.svg" alt="Serra Jr. Engenharia" className="h-20 mx-auto" />
+            <img
+              src="/LogoSerraJr.svg"
+              alt="Serra Jr. Engenharia"
+              className="h-20 mx-auto"
+            />
           </SwiperSlide>
         </Swiper>
       </div>
@@ -105,9 +129,14 @@ export default function Partners() {
       <div className="text-center">
         <Dialog>
           <DialogTrigger asChild>
-            <Button variant="default" className="bg-[orange] text-white font-bold text-md p-4 hover:border-[orange] hover:bg-white hover:text-[orange] transition duration-400 hover:transition hover:duration-400 border-2 border-[orange] hover:border-2">Conheça os Desenvolvedores</Button>
+            <Button
+              variant="default"
+              className="cursor-pointer bg-[orange] text-white font-bold text-md p-4 hover:border-[orange] hover:bg-white hover:text-[orange] transition duration-400 hover:transition hover:duration-400 border-2 border-[orange] hover:border-2"
+            >
+              Conheça os Desenvolvedores
+            </Button>
           </DialogTrigger>
-          <DialogContent className="p-4 max-w-lg md:max-w-2xl max-h-screen overflow-y-auto">
+          <DialogContent className="p-4 max-w-lg md:max-w-2xl max-h-screen overflow-y-auto [&>button]:cursor-pointer">
             <DialogHeader>
               <DialogTitle>Desenvolvedores</DialogTitle>
             </DialogHeader>
@@ -117,7 +146,9 @@ export default function Partners() {
                   key={index}
                   href={dev.link ? dev.link : "#developers"}
                   className="flex flex-col items-center bg-gray-50 rounded-xl p-4 shadow-sm hover:shadow-md transition duration-300 transform hover:scale-[1.03]"
-                  {...(dev.link ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                  {...(dev.link
+                    ? { target: "_blank", rel: "noopener noreferrer" }
+                    : {})}
                 >
                   {dev.image ? (
                     <Image
@@ -132,7 +163,9 @@ export default function Partners() {
                       <BsPersonCircle size={100} className="text-gray-400" />
                     </div>
                   )}
-                  <p className="text-sm font-semibold text-gray-800 text-center">{dev.name}</p>
+                  <p className="text-sm font-semibold text-gray-800 text-center">
+                    {dev.name}
+                  </p>
                   <div className="flex justify-center mt-2 text-gray-500 hover:text-black transition">
                     <FaGithub size={20} />
                   </div>
